@@ -1,0 +1,78 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<nav id="navbar">
+  <header> String.prototype.charCodeAt()
+  </header> 
+  <a class="nav-link" href="#first_section">Description</a>
+  <a class="nav-link" href="#second_section">Parameters</a>
+  <a class="nav-link" href="#third_section">Return Value</a>
+  <a class="nav-link" href="#fourth_section">Examples</a>
+  <a class="nav-link" href="#fifth_section">Browser Compatibility</a>
+</nav>
+<main id="main-doc">
+  
+  <section class="main-section" id="first_section">
+    <header>Description</header>
+    <p>The charCodeAt() method returns an integer between 0 and 65535 representing the UTF-16 code unit at the given index.</p>
+    <p>This method is part of the String prototype and is commonly used when you need to work with character encodings.</p>
+    <p>If you need to get the entire code point of a character, use String.prototype.codePointAt().</p>
+    <code>str.charCodeAt(index)</code>
+    <ol>
+      <li>Returns a number representing the UTF-16 code unit value</li>
+      <li>Returns NaN if index is out of range</li>
+      <li>Commonly used in string manipulation and encoding</li>
+    </ol>
+  </section>  
+  
+  <section class="main-section" id="second_section">
+    <header>Parameters</header>
+    <p>The method accepts a single parameter: index</p>
+    <p>Index is an integer between 0 and str.length - 1. If index is not a number, it defaults to 0.</p>
+    <p>If no index is provided, the default value is 0.</p>
+    <code>let str = "ABC";</code>
+    <code>str.charCodeAt(0); // returns 65 (ASCII value of 'A')</code>
+    <code>str.charCodeAt(1); // returns 66 (ASCII value of 'B')</code>
+  </section>
+  
+  <section class="main-section" id="third_section">
+    <header>Return Value</header>
+    <p>Returns a number representing the UTF-16 code unit value of the character at the specified index.</p>
+    <p>The return value will be between 0 and 65535.</p>
+    <p>If the index is out of range, charCodeAt() returns NaN.</p>
+    <code>let str = "Hello";</code>
+    <ol>
+      <li>str.charCodeAt(0) returns 72 ('H')</li>
+      <li>str.charCodeAt(999) returns NaN (out of range)</li>
+    </ol>
+  </section>
+  
+  <section class="main-section" id="fourth_section">
+    <header>Examples</header>
+    <p>Here are some practical examples of using charCodeAt():</p>
+    <p>Basic usage with ASCII characters:</p>
+    <p>Working with special characters and Unicode:</p>
+    <code>
+let text = "Hello, World!";
+console.log(text.charCodeAt(0));  // 72
+console.log(text.charCodeAt(7));  // 87
+    </code>
+    <ol>
+      <li>Example with ASCII characters</li>
+      <li>Example with Unicode characters</li>
+    </ol>
+  </section>
+  
+  <section class="main-section" id="fifth_section">
+    <header>Browser Compatibility</header>
+    <p>The charCodeAt() method is supported in all modern browsers.</p>
+    <p>It has been part of the ECMAScript standard since version 1.</p>
+    <p>No polyfill is needed for this method.</p>
+    <code>// Supported in: Chrome, Firefox, Safari, Edge, IE11+</code>
+    <ol>
+      <li>Works in all modern browsers</li>
+      <li>Part of core JavaScript functionality</li>
+    </ol>
+  </section>
+  
+</main>
